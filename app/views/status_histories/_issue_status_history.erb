@@ -6,7 +6,7 @@
         <%=l(:label_history_issue_creation)%>
       </td>
       <td>
-        <%= format_date(issue.created_on)%>
+        <%= format_time(issue.created_on)%>
       </td>
       <td>
         <%= first_status(issue)%>
@@ -18,7 +18,7 @@
     <% issue_status_changes(issue).each do |c| %>
       <tr>
         <td></td>
-        <td><%= format_date(c.from)%></td>
+        <td><%= format_time(c.from)%></td>
         <td><%= c.status%></td>
         <td><%= c.user%></td>
       </tr>
